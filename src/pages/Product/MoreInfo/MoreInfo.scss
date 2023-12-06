@@ -1,0 +1,61 @@
+.product-more-info {
+  margin-top: 100px;
+  background-color: #f4f4f4;
+  padding: 50px 0px;
+  .more-info-flex {
+    h1 {
+      font-weight: 400;
+      font-size: 30px;
+    }
+    display: flex;
+    justify-content: space-between;
+    .instructions-main {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .instruction {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid #a0a0a0;
+        padding-bottom: 10px;
+        &:nth-child(5) {
+          border: 0;
+        }
+        span {
+          display: flex;
+          color: black;
+          font-family: "Montserrat", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 24px;
+
+          gap: 10px;
+        }
+      }
+    }
+    .about-tea-main {
+      .tea-info-flex {
+        display: flex;
+        gap: 30px;
+        .info {
+          border-right: 1px solid #a0a0a0;
+          padding-right: 30px;
+          .bold-p {
+            font-weight: 700;
+          }
+        }
+      }
+      .more-info-footer {
+        padding-top: 40px;
+
+        p {
+          width: 500px;
+          max-width: 100%;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

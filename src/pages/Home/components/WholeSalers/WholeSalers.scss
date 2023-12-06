@@ -1,0 +1,62 @@
+.whole-salers {
+  padding: 100px 0px;
+  .whole-salers-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .whole-salers-leftside {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      text-align: center;
+      button {
+        margin: auto;
+        border: 1px solid transparent;
+
+        transition: 0.3s;
+        &:hover {
+          background-color: transparent;
+          border: 1px solid #f0f0f0;
+        }
+      }
+      p {
+        width: 400px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .whole-salers {
+    .whole-salers-flex {
+      .whole-salers-rightside {
+        img {
+          width: 450px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .whole-salers {
+    .whole-salers-flex {
+      flex-direction: column;
+      gap: 50px;
+      .whole-salers-leftside {
+        h1 {
+          font-size: 30-px;
+        }
+        p {
+          width: 100%;
+        }
+      }
+      .whole-salers-rightside {
+        img {
+          width: 450px;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

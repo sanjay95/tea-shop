@@ -1,0 +1,13 @@
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+  .container-flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+}/*# sourceMappingURL=Purchase.css.map */

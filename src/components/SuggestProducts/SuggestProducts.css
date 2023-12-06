@@ -1,0 +1,107 @@
+.suggest-products {
+  padding: 100px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.suggest-products .suggest-products-flex {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+.suggest-products .item-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  padding-top: 2rem;
+}
+.suggest-products .item-container__tea {
+  width: 310px;
+  height: 350px;
+}
+.suggest-products .item-container__tea:hover .img-wrapper__details {
+  opacity: 1;
+}
+.suggest-products .item-container__tea .img-wrapper {
+  position: relative;
+}
+.suggest-products .item-container__tea .img-wrapper__details {
+  opacity: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.581);
+  width: 100%;
+  height: 100%;
+  z-index: 55;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.suggest-products .item-container__tea .img-wrapper__details-button {
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  width: 150px;
+  height: 30px;
+}
+.suggest-products .item-container__tea .img-wrapper__details-button-details {
+  color: white;
+}
+.suggest-products .item-container__tea .img-wrapper__details-button-details:hover {
+  background-color: rgb(234, 234, 234);
+  color: black;
+}
+.suggest-products .item-container__tea-img {
+  width: 100%;
+}
+.suggest-products .item-container__tea-name {
+  text-align: center;
+  color: rgb(130, 130, 130);
+}
+.suggest-products .item-container__tea .price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.suggest-products .item-container__tea-price {
+  text-align: center;
+}
+.suggest-products .item-container__tea-serving {
+  text-align: center;
+  font-size: 0.8rem;
+  color: grey;
+}
+
+@media screen and (max-width: 1200px) {
+  .suggest-products {
+    padding: 100px 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+  }
+  .suggest-products .item-container__tea {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .suggest-products .suggest-products-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+  .suggest-products .item-container__tea {
+    height: unset;
+  }
+}/*# sourceMappingURL=SuggestProducts.css.map */

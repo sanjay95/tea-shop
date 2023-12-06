@@ -1,0 +1,12 @@
+.login-main {
+  padding: 100px 0px;
+}
+.login-main .login-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.login-main .login-flex .universal-box-main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}/*# sourceMappingURL=Login.css.map */

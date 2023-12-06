@@ -1,0 +1,92 @@
+.blog-container {
+  padding: 50px 0px;
+  background-color: rgb(237, 237, 237);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.blog-container__heading {
+  text-align: center;
+  margin-bottom: 70px;
+}
+.blog-container .content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.blog-container .content {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.blog-container .content-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.blog-container .content-description__heading {
+  font-size: 22px;
+}
+.blog-container .content-description__paragraph {
+  font-size: 16px;
+}
+.blog-container .content-description__button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  padding: 5px 10px;
+  font-size: 14px;
+  transition: 0.4s;
+}
+.blog-container .content-description__button:hover {
+  cursor: pointer;
+  border: 2px solid rgb(216, 216, 216);
+  border-radius: 5px;
+  color: rgb(85, 85, 85);
+}
+
+@media screen and (max-width: 1200px) {
+  .blog-container .content-wrapper {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .blog-container .content-wrapper .content {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.153);
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .blog-container .content-wrapper {
+    flex-direction: column;
+    gap: 50px;
+    width: 98%;
+  }
+  .blog-container .content-wrapper .content {
+    justify-content: flex-start;
+  }
+  .blog-container .content-wrapper .content-description {
+    width: 100%;
+    min-width: 190px;
+    justify-content: flex-start;
+    gap: 20px;
+    position: relative;
+  }
+  .blog-container .content-wrapper .content-description__button {
+    position: absolute;
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 771px) {
+  .blog-container .blog-container__heading {
+    font-size: 24px;
+  }
+  .blog-container .content-wrapper .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .blog-container .content-wrapper .content button {
+    position: relative;
+    margin: 0px auto;
+  }
+}/*# sourceMappingURL=LastBlog.css.map */

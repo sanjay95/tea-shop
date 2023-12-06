@@ -1,0 +1,56 @@
+.order-summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.order-summary-container__checkout {
+  width: 400px;
+  height: 400px;
+  background: rgb(240, 240, 240);
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.order-summary-container__checkout-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid grey;
+}
+.order-summary-container .container-heading {
+  font-size: 28px;
+}
+.order-summary-container .container-paragraph {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.order-summary-container .order-container {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.order-summary-container .order-container__text {
+  color: grey;
+}
+.order-summary-container .order-container a {
+  text-decoration: none;
+}
+.order-summary-container .order-container a .order-container__button {
+  width: 100%;
+  background-color: #282828;
+  font-size: 20px;
+  color: white;
+}
+.order-summary-container .order-container a .order-container__button:disabled {
+  cursor: not-allowed;
+  background: grey;
+}
+.order-summary-container .order-container a .order-container__button:disabled:hover {
+  background: grey;
+}
+.order-summary-container .order-container a .order-container__button:hover {
+  background: #333333;
+}/*# sourceMappingURL=OrderCard.css.map */

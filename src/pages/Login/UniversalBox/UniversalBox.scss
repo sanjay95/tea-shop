@@ -1,0 +1,29 @@
+.universal-box {
+  width: 500px;
+  background-color: #f4f4f4;
+  padding: 23px;
+  h1 {
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 19px;
+  }
+  .suggest-list {
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .suggested {
+      display: flex;
+      align-items: center;
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  button {
+    width: 100%;
+    border: 1px solid #282828;
+  }
+}

@@ -1,0 +1,52 @@
+.options-info {
+  padding: 30px 76px;
+  background-color: #f4f4f4;
+  margin: 50px 0px;
+}
+.options-info .options-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.options-info .options-main button {
+  border: 1px solid #282828;
+}
+.options-info .options-main .options {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.options-info .options-main .options .option {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+@media screen and (max-width: 1250px) {
+  .options-info .options-main .options {
+    flex-wrap: wrap;
+  }
+  .options-info .options-main .options .option {
+    width: 50%;
+    margin: 20px 0px;
+    justify-content: center;
+  }
+  .options-info .options-main .options .option p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .options-info .options-main .options {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .options-info .options-main .options .option {
+    width: 300px;
+    margin: 25px 0px;
+  }
+  .options-info .options-main .options .option p {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=OptionsInfo.css.map */

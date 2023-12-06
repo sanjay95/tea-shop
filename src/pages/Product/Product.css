@@ -1,0 +1,60 @@
+.product-main {
+  padding: 50px 0px;
+}
+.product-main .product-info-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.product-main .product-info-flex .product-image img {
+  width: 450px;
+  object-fit: cover;
+}
+.product-main .product-info-flex .product-info .icons-flex {
+  padding: 25px 0px;
+  display: flex;
+  gap: 50px;
+}
+.product-main .product-info-flex .product-info .icons-flex div {
+  display: flex;
+  gap: 4px;
+}
+.product-main .product-info-flex .product-info .variants {
+  padding: 20px 0px;
+}
+.product-main .product-info-flex .product-info .variants .variants-flex {
+  display: flex;
+  padding-top: 20px;
+  gap: 40px;
+}
+.product-main .product-info-flex .product-info .variants .variants-flex .variant {
+  padding: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+}
+.product-main .product-info-flex .product-info .variants .variants-flex .variant.active {
+  border: 1px solid #c3b212;
+}
+.product-main .product-info-flex .product-info .variants .variants-flex .variant p {
+  font-size: 14px;
+}
+.product-main .product-info-flex .product-info .info-footer {
+  display: flex;
+  gap: 40px;
+  padding-top: 30px;
+}
+.product-main .product-info-flex .product-info .info-footer .quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-main .product-info-flex .product-info .info-footer .quantity p {
+  font-weight: 700;
+}
+.product-main .product-info-flex .product-info .info-footer .quantity img {
+  cursor: pointer;
+}
+.product-main .product-info-flex .product-info .info-footer button {
+  background-color: #282828;
+  color: #fff;
+}/*# sourceMappingURL=Product.css.map */
