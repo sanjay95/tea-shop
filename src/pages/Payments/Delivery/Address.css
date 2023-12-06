@@ -1,0 +1,68 @@
+.address-container {
+  display: flex;
+  gap: 20px;
+}
+.address-container .shipping-address {
+  width: 400px;
+  padding: 40px 20px;
+}
+.address-container .shipping-address__form {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+.address-container .shipping-address__form h1 {
+  padding: 0 20px;
+  font-size: 26px;
+}
+.address-container .shipping-address__form input {
+  padding: 10px;
+  height: 40px;
+  font-size: 14px;
+}
+.address-container .shipping-address__form div {
+  display: flex;
+  gap: 20px;
+}
+.address-container .shipping-address__form div input {
+  width: 50%;
+}
+.address-container .shipping-address__form select {
+  height: 40px;
+  padding: 10px;
+}
+.address-container .shipping-address__form select option {
+  font-size: 14px;
+}
+.address-container .billing-address {
+  min-width: 250px;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.address-container .billing-address div {
+  display: flex;
+  gap: 10px;
+}
+.address-container .billing-address h1 {
+  font-size: 26px;
+}
+
+@media (max-width: 1200px) {
+  .address-container {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 750px) {
+  .address-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .address-container .shipping-address {
+    justify-content: space-between;
+  }
+  .address-container .billing-address {
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=Address.css.map */

@@ -1,0 +1,27 @@
+.items-container {
+  background: rgb(233, 233, 233);
+  max-width: 1680px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.items-container__img {
+  width: 100%;
+}
+.items-container__path {
+  text-transform: uppercase;
+  padding: 50px;
+  font-size: 14px;
+}
+.items-container__content {
+  display: flex;
+  gap: 100px;
+}
+
+@media (max-width: 700px) {
+  .items-container__content {
+    gap: 20px;
+  }
+  .items-container__path {
+    text-align: center;
+  }
+}/*# sourceMappingURL=Items.css.map */

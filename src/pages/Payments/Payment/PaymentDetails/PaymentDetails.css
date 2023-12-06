@@ -1,0 +1,29 @@
+.payment-details__container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  gap: 30px;
+}
+.payment-details__container h1 {
+  font-size: 26px;
+}
+.payment-details__container p {
+  color: rgb(155, 155, 155);
+}
+.payment-details__container .paragraph-heading {
+  color: black;
+  font-weight: bold;
+}
+.payment-details__container a {
+  text-decoration: none;
+  height: 40px;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #c3b212;
+  cursor: pointer;
+}
+.payment-details__container a:hover {
+  color: #cabf57;
+}/*# sourceMappingURL=PaymentDetails.css.map */

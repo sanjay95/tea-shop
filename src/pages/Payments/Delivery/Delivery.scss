@@ -1,0 +1,16 @@
+.delivery {
+  padding-bottom: 200px;
+  .delivery-box {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1300px) {
+  .delivery-box {
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    align-items: center;
+  }
+}

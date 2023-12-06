@@ -1,0 +1,29 @@
+.purchase-container {
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 0;
+  gap: 10px;
+  font-weight: bold;
+  min-width: 400px;
+  .delivery-line {
+    width: 100%;
+    border: 1px solid rgb(175, 175, 175);
+  }
+  .payment-line {
+    width: 100%;
+    border: 1px solid rgb(175, 175, 175);
+  }
+  .delivery-text {
+    color: rgb(175, 175, 175);
+  }
+  .payment-text {
+    color: rgb(175, 175, 175);
+  }
+}
+@media (max-width: 700px) {
+  .purchase-container {
+    margin: 50px auto;
+  }
+}

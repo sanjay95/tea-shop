@@ -1,0 +1,80 @@
+.signin-box {
+  width: 552px;
+  padding: 23px;
+  height: 470px;
+  max-width: 100%;
+  background-color: #f4f4f4;
+}
+.signin-box h1 {
+  margin-bottom: 20px;
+}
+.signin-box .inputs-main {
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.signin-box .inputs-main .input {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 16px 10px;
+  position: relative;
+  overflow: hidden;
+}
+.signin-box .inputs-main .input input {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 0;
+  margin-left: 50px;
+  padding-right: 50px;
+  font-size: 15px;
+  color: #282828;
+  font-family: "Montserrat", sans-serif;
+}
+.signin-box .inputs-main .input input::-moz-placeholder {
+  color: #282828;
+}
+.signin-box .inputs-main .input input::placeholder {
+  color: #282828;
+}
+.signin-box .signin-bottomside .bottomside-flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+.signin-box .signin-bottomside .bottomside-flex form {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.signin-box .signin-bottomside .bottomside-flex form > * {
+  cursor: pointer;
+}
+.signin-box .signin-bottomside .bottomside-flex form label {
+  color: #282828;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.5px;
+}
+.signin-box .signin-bottomside .bottomside-flex p {
+  color: #c3b212;
+  cursor: pointer;
+}
+.signin-box .signin-bottomside button {
+  width: 100%;
+  margin: 20px 0px;
+  background-color: #282828;
+  color: #fff;
+}/*# sourceMappingURL=SignIn.css.map */

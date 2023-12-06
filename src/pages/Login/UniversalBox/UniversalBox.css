@@ -1,0 +1,28 @@
+.universal-box {
+  width: 500px;
+  background-color: #f4f4f4;
+  padding: 23px;
+}
+.universal-box h1 {
+  margin-bottom: 20px;
+}
+.universal-box p {
+  font-size: 19px;
+}
+.universal-box .suggest-list {
+  padding: 30px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.universal-box .suggest-list .suggested {
+  display: flex;
+  align-items: center;
+}
+.universal-box .suggest-list .suggested p {
+  font-size: 16px;
+}
+.universal-box button {
+  width: 100%;
+  border: 1px solid #282828;
+}/*# sourceMappingURL=UniversalBox.css.map */

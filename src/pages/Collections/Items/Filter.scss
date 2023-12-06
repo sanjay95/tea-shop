@@ -1,0 +1,29 @@
+.filter-container {
+  min-width: 200px;
+  min-height: 500px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  &__category {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.337);
+    padding: 10px;
+    cursor: pointer;
+  }
+  &__check {
+    margin-top: 5px;
+    margin-left: 10px;
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .filter-container {
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,48 @@
+.whole-salers {
+  padding: 100px 0px;
+}
+.whole-salers .whole-salers-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.whole-salers .whole-salers-flex .whole-salers-leftside {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  text-align: center;
+}
+.whole-salers .whole-salers-flex .whole-salers-leftside button {
+  margin: auto;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+.whole-salers .whole-salers-flex .whole-salers-leftside button:hover {
+  background-color: transparent;
+  border: 1px solid #f0f0f0;
+}
+.whole-salers .whole-salers-flex .whole-salers-leftside p {
+  width: 400px;
+}
+
+@media screen and (max-width: 1200px) {
+  .whole-salers .whole-salers-flex .whole-salers-rightside img {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .whole-salers .whole-salers-flex {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .whole-salers .whole-salers-flex .whole-salers-leftside h1 {
+    font-size: 30-px;
+  }
+  .whole-salers .whole-salers-flex .whole-salers-leftside p {
+    width: 100%;
+  }
+  .whole-salers .whole-salers-flex .whole-salers-rightside img {
+    width: 450px;
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=WholeSalers.css.map */
