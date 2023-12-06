@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./Address.css";
 
 
@@ -8,6 +8,7 @@ import Suggestion from "./CoffeeBasedSuggestions/suggestion"
 import ModalPopup from "../../../components/ModalPopup/ModalPopup";
 import SuggestProducts from "../../../components/SuggestProducts/SuggestProducts";
 import Product from "../../../components/SuggestProducts/Product";
+import { MyContext } from "../../../API/Context";
 
 
 interface FormData {
@@ -32,10 +33,12 @@ interface CoffeeHabbit {
 
 interface AddressProps {
   onFormValidityChange: (isValid: boolean) => void;
+  
 }
 const hostUrl = "http://localhost:5173";
 
 const Address = ({ onFormValidityChange }: AddressProps) => {
+  const ctx = useContext(MyContext);
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -118,14 +121,20 @@ const Address = ({ onFormValidityChange }: AddressProps) => {
         avergaeSpendPerCup: addressData.avergaeSpendPerCup
       }
     })
-    console.log('coffeeData',coffeeData);
-    if (coffeeData) { sessionStorage.setItem('freedelivery', 'true'); }
-    console.log('sessionData',sessionStorage.getItem('freedelivery'));
+    console.log('coffeeData', coffeeData);
+
+
     navigate("/payment/delivery");
     setOpen(true);
 
 
   }, [addressData])
+
+  useEffect(() => {
+
+    if (coffeeData) { ctx.setFreeDelivery(true); }
+
+  }, [coffeeData])
 
   useEffect(() => {
     if (!errorDescription) return

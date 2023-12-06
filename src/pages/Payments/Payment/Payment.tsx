@@ -16,12 +16,13 @@ const Payment = () => {
         <PaymentDetails />
         <PaymentType />
         <OrderCard
-          subtotal={ctx?.totalAmount}
+          subtotal={ctx?.totalAmount||0}
           totalAmount={
             ctx?.totalAmount ? parseInt((ctx.totalAmount + 3.95).toFixed(2)) : 0
           }
           path=""
           buttonText="pay"
+          freeDelivery={ctx?.freeDelivery}
         />
       </div>
     </div>

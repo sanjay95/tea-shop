@@ -12,17 +12,20 @@ const Delivery = () => {
   const totalAmount = ctx?.totalAmount ? ctx.totalAmount + deliveryFee : 0;
   console.log('context in /Payment/Delivery', ctx);
 
+
+
   return (
     <div className="container delivery">
       <PurchasePath style={true} />
       <div className="delivery-box">
         <Address onFormValidityChange={(isValid) => setFormIsValid(isValid)} />
         <OrderCard
-          subtotal={ctx?.totalAmount}
+          subtotal={ctx?.totalAmount||0}
           totalAmount={parseInt(totalAmount.toFixed(2))}
           disabled={!formIsValid}
           path="/payment/pay"
           buttonText="go to payment"
+          freeDelivery={ctx?.freeDelivery}
         />
       </div>
     </div>

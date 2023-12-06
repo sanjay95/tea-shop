@@ -18,6 +18,8 @@ interface ContextInterface {
   removeFromCartHandler: (id: number) => void;
   decrementItemAmount: (id: number) => void;
   totalAmount: number;
+  freeDelivery?:boolean
+  setFreeDelivery:(flag:boolean)=>void
 }
 
 export const MyContext = createContext<ContextInterface | undefined>(undefined);
@@ -31,7 +33,14 @@ export const MyContextProvider = ({ children }: any) => {
 
   const [openedCart, setOpenedCart] = useState(false);
   const [bagList, setBagList] = useState<CartItem[]>(JSON.parse(sessionStorage.getItem("bagList") as string)||[]);
-  const [discount,setDiscount]=useState(sessionStorage.getItem("freedelivery"))
+  // const [discount,setDiscount]=useState(sessionStorage.getItem("freedelivery"))
+
+  const [freeDelivery, setFreeDelivery] = useState(false);
+  useEffect(() => {
+    console.log("bagList updated, persist state");
+    sessionStorage.setItem("bagList", JSON.stringify(bagList));
+  }, [bagList]);
+
   useEffect(() => {
     console.log("bagList updated, persist state");
     sessionStorage.setItem("bagList", JSON.stringify(bagList));
@@ -84,7 +93,7 @@ export const MyContextProvider = ({ children }: any) => {
 
   const totalAmount = bagList
     .map((i) => (i.amount ? i.amount * i.price : 0))
-    .reduce((a, b) => a || 0 + b || 0, 0);
+    .reduce((partialSum, a) => partialSum + a, 0);
 
   return (
     <MyContext.Provider
@@ -96,6 +105,8 @@ export const MyContextProvider = ({ children }: any) => {
         cartOpenHandler,
         bagList,
         addToCarthandler,
+        freeDelivery,
+        setFreeDelivery
       }}
     >
       {children}
