@@ -5,6 +5,9 @@ import "./Address.css";
 import useInitiateAddressRequest from '../../../hooks/useInitiateAddressRequest';
 import { useNavigate } from "react-router-dom";
 import Suggestion from "./CoffeeBasedSuggestions/suggestion"
+import ModalPopup from "../../../components/ModalPopup/ModalPopup";
+import SuggestProducts from "../../../components/SuggestProducts/SuggestProducts";
+import Product from "../../../components/SuggestProducts/Product";
 
 
 interface FormData {
@@ -115,10 +118,12 @@ const Address = ({ onFormValidityChange }: AddressProps) => {
         avergaeSpendPerCup: addressData.avergaeSpendPerCup
       }
     })
-
+    console.log('coffeeData',coffeeData);
+    if (coffeeData) { sessionStorage.setItem('freedelivery', 'true'); }
+    console.log('sessionData',sessionStorage.getItem('freedelivery'));
     navigate("/payment/delivery");
     setOpen(true);
-    console.log('popstatus', open)
+
 
   }, [addressData])
 
@@ -134,14 +139,18 @@ const Address = ({ onFormValidityChange }: AddressProps) => {
   return (
     <div className="address-container">
       <div className="shipping-address">
-
-        {open &&
-          <>
-            <Suggestion text="Testing the popuo" closePopup={() => setOpen(false)}>
-
-            </Suggestion>
-          </>
-        }
+        <ModalPopup open={open} onClose={() => setOpen(false)}>
+          <div style={{ paddingLeft: "14rem", paddingBottom: "2rem" }}>
+            <h2>We value our fellow Coffee enthusiast</h2>
+          </div>
+          <p>Based on your coffee habbit, we have some tea suggestion for you</p>
+          <div style={{ paddingLeft: "20rem", paddingTop: "2rem" }}>
+            <h3>You May Also Like</h3>
+          </div>
+          <div className="suggest-products-flex">
+            <Product />
+          </div>
+        </ModalPopup>
 
         {errorDescription && <div style={{ color: "red" }}> {error}:  {errorDescription} </div>}
         <form className="shipping-address__form">
@@ -190,18 +199,12 @@ const Address = ({ onFormValidityChange }: AddressProps) => {
             value={formData.country}
             onChange={handleInputChange}
           >
-            <option>State</option>
-            <option>Karnataka</option>
-            <option>Delhi</option>
-            <option>Kerala</option>
-            <option>Tamilnadu</option>
-            <option>Maharastra</option>
-            <option>Rajshthan</option>
-            <option>Madhya Pradesh</option>
-            <option>Bihar</option>
-            <option>Uttar Pradesh</option>
-            <option>West bengal</option>
-            <option>Jharkhand</option>
+            <option>Country</option>
+            <option>Australia</option>
+            <option>India</option>
+            <option>Singapore</option>
+            <option>Germany</option>
+
           </select>
         </form>
         {!addressData && <div onClick={handleInitiate} style={{ paddingTop: "2rem" }}>
@@ -223,18 +226,23 @@ const Address = ({ onFormValidityChange }: AddressProps) => {
           </button>
         </div>
         }
-        <button onClick={()=>{setOpen(true); console.log('clicked')}}> click</button>
       </div>
-      <div className="billing-address">
-        <h1>Billing Address</h1>
-        <p>(same as shipping address)</p>
-        <div>
-          <input type="checkbox" id="address" />
-          <label htmlFor="address" id="address">
-            <p>Bill to a different address</p>
-          </label>
+      {coffeeData &&
+        <div className="billing-address">
+
+          {/* <h1 style={{animation:"running", animationIterationCount:"infinite", animationTimingFunction:"cubic-bezier(1.0,0,0,1.0)",animationDuration:"1s"}}> */}
+          <h1 style={{ color: "rosybrown" }}>Special Offcer for you
+          </h1>
+          <p>We noticed your affinity for premium <span style={{ color: "brown" }}>coffee</span> spending</p>
+          <p>We would love to have you as our regulars !</p>
+          <p>We are offering you <span style={{ color: "red", fontWeight: "bold" }}> FREE</span> delivery on tea purchase</p>
+          <p style={{ color: "brown" }}> Happy <span style={{ color: "green" }}>Brewing</span> !</p>
+          <div>
+
+
+          </div>
         </div>
-      </div>
+      }
     </div >
   );
 };

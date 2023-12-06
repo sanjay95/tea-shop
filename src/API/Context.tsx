@@ -31,6 +31,7 @@ export const MyContextProvider = ({ children }: any) => {
 
   const [openedCart, setOpenedCart] = useState(false);
   const [bagList, setBagList] = useState<CartItem[]>(JSON.parse(sessionStorage.getItem("bagList") as string)||[]);
+  const [discount,setDiscount]=useState(sessionStorage.getItem("freedelivery"))
   useEffect(() => {
     console.log("bagList updated, persist state");
     sessionStorage.setItem("bagList", JSON.stringify(bagList));

@@ -5,6 +5,7 @@ import OptionsInfo from "./components/OptionsInfo/OptionsInfo";
 import WholeSalers from "./components/WholeSalers/WholeSalers";
 
 export default function Home() {
+  sessionStorage.clear();
   return (
     <div>
       <FirstSection />

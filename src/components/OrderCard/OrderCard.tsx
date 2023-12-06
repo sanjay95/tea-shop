@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "./OrderCard.css";
 
+
+
 interface OrderCardProps {
   buttonText: string;
   path: string;
@@ -16,6 +18,9 @@ const OrderCard = ({
   subtotal,
   totalAmount,
 }: OrderCardProps) => {
+  const freeDelivery=sessionStorage.getItem('freedelivery');
+  console.log("sessionStorage at OrderCard",freeDelivery)
+  
   return (
     <div className="order-summary-container">
       <div className="order-summary-container__checkout">
@@ -25,7 +30,7 @@ const OrderCard = ({
             Subtotal<span>${subtotal}</span>
           </p>
           <p className="container-paragraph">
-            Delivery<span>$3.95</span>
+            Delivery {freeDelivery ?<span style={{color:"red", textDecoration:"line-through"}}>$3.95</span>:<span>$3.95</span> }
           </p>
         </div>
         <div>

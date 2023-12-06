@@ -7,9 +7,11 @@ export default function ModalPopup({ open, children, onClose }) {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         {children}
+        <div style={{alignItems:"center"}}>
         <button className="modal-close" onClick={onClose}>
           Close
         </button>
+        </div>
       </div>
     </div>
   );
