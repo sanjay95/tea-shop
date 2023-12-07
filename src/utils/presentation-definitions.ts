@@ -633,7 +633,7 @@ const addressAndCoffeeVC = {
               type: 'array',
               contains: {
                 type: 'string',
-                pattern: 'CoffeeProfileVC',
+                pattern: 'CoffeeProfile',
               },
             },
           },

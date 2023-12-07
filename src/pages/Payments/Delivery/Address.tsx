@@ -152,7 +152,7 @@ const Address = ({ onFormValidityChange }: AddressProps) => {
           <div style={{ paddingLeft: "14rem", paddingBottom: "2rem" }}>
             <h2>We value our fellow Coffee enthusiast</h2>
           </div>
-          <p>Based on your coffee habbit, we have some tea suggestion for you</p>
+          <p>Other coffee lovers enjoyed the following new arrivals on our store</p>
           <div style={{ paddingLeft: "20rem", paddingTop: "2rem" }}>
             <h3>You May Also Like</h3>
           </div>
